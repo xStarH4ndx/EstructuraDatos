@@ -32,7 +32,7 @@ int main(){
                 pila.pop();
             }else{
 
-                while(pila.top()->getPeso() < sAux1.top()->getPeso() || sAux1.empty()){
+                while(pila.top()->getPeso() < sAux1.top()->getPeso() || !sAux1.empty()){
                     sAux2.push(sAux1.top());
                     sAux1.pop();
                 }
@@ -46,5 +46,20 @@ int main(){
             }
         }
     }
+
+    // Mostrar contenido de la pila original
+    cout << "Contenido de la pila original:" << endl;
+    while (!pila.empty()) {
+        cout << "Peso: " << pila.top()->getPeso() << endl;
+        pila.pop();
+    }
+    
+    // Mostrar contenido de la pila ordenada
+    cout << "\nContenido de la pila ordenada:" << endl;
+    while (!sAux1.empty()) {
+        cout << "Peso: " << sAux1.top()->getPeso() << endl;
+        sAux1.pop();
+    }
+    
     return 0;
 }
