@@ -22,8 +22,29 @@ int main(){
     stack<Camion*> sAux1;
     stack<Camion*> sAux2;
 
-    if(pila.empty()){
-        cout<<"La pila está vacía"<<endl;
-    }
+    while(!pila.empty()){
+        if(sAux1.empty()){
+            sAux1.push(pila.top());
+            pila.pop();
+        }else{
+            if(pila.top()->getPeso() < sAux1.top()->getPeso()){
+                sAux1.push((pila.top()));
+                pila.pop();
+            }else{
 
+                while(pila.top()->getPeso() < sAux1.top()->getPeso() || sAux1.empty()){
+                    sAux2.push(sAux1.top());
+                    sAux1.pop();
+                }
+
+                sAux1.push(pila.top());
+                pila.pop();
+                while(!sAux2.empty()){
+                    sAux1.push(sAux2.top());
+                    sAux2.pop();
+                } 
+            }
+        }
+    }
+    return 0;
 }
