@@ -2,7 +2,7 @@
 using namespace std;
 
 Camion::Camion(int peso,string id){
-    this->peso==peso;
+    this->peso=peso;
 }
 Camion::~Camion(){delete this;}
 
@@ -11,7 +11,7 @@ int Camion::getPeso(){
 }
 
 void Camion::setPeso(int peso){
-    this->peso==peso;
+    this->peso=peso;
 }
 
 string Camion::getId(){
