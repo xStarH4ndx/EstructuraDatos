@@ -4,7 +4,7 @@ using namespace std;
 Camion::Camion(int peso,string id){
     this->peso==peso;
 }
-Camion::~Camion(){}
+Camion::~Camion(){delete this;}
 
 int Camion::getPeso(){
     return this->peso;

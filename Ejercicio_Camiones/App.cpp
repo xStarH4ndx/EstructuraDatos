@@ -61,9 +61,6 @@ int main(){
         sAux1.pop();
     }
     // Asegúrate de liberar la memoria de los objetos Camion antes de salir del programa
-    delete c1;
-    delete c2;
-    delete c3;
-    delete c4;
+    c1->~Camion();
     return 0;
 }
