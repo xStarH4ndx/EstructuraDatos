@@ -62,5 +62,8 @@ int main(){
     }
     // Asegúrate de liberar la memoria de los objetos Camion antes de salir del programa
     c1->~Camion();
+    c2->~Camion();
+    c3->~Camion();
+    c4->~Camion();
     return 0;
 }
