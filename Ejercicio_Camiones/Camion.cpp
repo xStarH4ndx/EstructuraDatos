@@ -3,6 +3,7 @@ using namespace std;
 
 Camion::Camion(int peso,string id){
     this->peso=peso;
+    this->id=id;
 }
 Camion::~Camion(){delete this;}
 
