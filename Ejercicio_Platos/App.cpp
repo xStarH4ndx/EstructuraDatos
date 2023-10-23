@@ -48,6 +48,10 @@ int main(){
     //esto es la cola de salida (el último es el primero que sale)
     queue<Plato> salida;
 
+    src.push(Plato(1,1));
+    src.push(Plato(2,2));
+    src.push(Plato(1,3));
+
     s1.push(src.top());//movemos el primer plato al aux1
     src.pop();
     //EMPEZAMOS A ORDENAR LA PILA AUXILIAR
