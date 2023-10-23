@@ -48,20 +48,21 @@ int main(){
     //esto es la cola de salida (el último es el primero que sale)
     queue<Plato> salida;
 
-    src.push(Plato(1,1));
-    src.push(Plato(2,2));
-    src.push(Plato(1,3));
+    src.push(Plato(1,2));//4
+    src.push(Plato(2,2));//2
+    src.push(Plato(1,3));//6
+    src= calcularPrioridad(src);
 
     s1.push(src.top());//movemos el primer plato al aux1
     src.pop();
     //EMPEZAMOS A ORDENAR LA PILA AUXILIAR
     while(!src.empty()){
-        if(src.top().getPrioridad() < s1.top().getPrioridad()){//PILA ORDENAR DE MENOR A MAYOR
+        if(src.top().getPrioridad() > s1.top().getPrioridad()){//PILA ORDENAR DE MENOR A MAYOR
             s1.push(src.top());
             src.pop();
         }else{
 
-            while(!s1.empty() && src.top().getPrioridad() > s1.top().getPrioridad()){
+            while(!s1.empty() && src.top().getPrioridad() < s1.top().getPrioridad()){
                 s2.push(s1.top());
                 s1.pop();
             }
