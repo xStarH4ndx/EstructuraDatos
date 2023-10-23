@@ -4,9 +4,8 @@ using namespace std;
 class Camion{
     private:
         int peso;
-        string id;
     public:
-        Camion(int,string);
+        Camion(int);
         ~Camion(); 
         int getPeso();
         void setPeso(int);
