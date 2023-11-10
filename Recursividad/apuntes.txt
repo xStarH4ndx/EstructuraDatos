@@ -1,0 +1,9 @@
+Naturaleza de la recursividad:
+- Se dice que un objeto es recursivo cuando forma parte de si mismo
+
+
+
+int y= x(h-1)+(x(h+1));
+
+
+ESTUDIAR RECURSIVIDAD EN YUTU
