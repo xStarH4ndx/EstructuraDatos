@@ -7,3 +7,12 @@ int y= x(h-1)+(x(h+1));
 
 
 ESTUDIAR RECURSIVIDAD EN YUTU
+
+
+buscarfib(int x){
+    if(x<=1){
+        return x;
+    }
+    int y= buscarfib(x-1)+buscarfib(x-2);
+    return y;
+}
