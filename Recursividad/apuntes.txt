@@ -39,7 +39,7 @@ El juego consiste en pasar todos los discos de otra varilla teniendo en cuenta q
 Siempre se tiene que poner ordenados
 
 PALO1       PALO2       PALO3
-  x1x         |
+  x1x         |           
   x2x         |
   3           1
   4           2
