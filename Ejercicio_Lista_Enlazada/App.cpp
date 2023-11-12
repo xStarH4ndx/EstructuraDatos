@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Lista.cpp"
 
-
+using namespace std;
 int main()
 {
     Lista* lista = new Lista();
@@ -14,10 +14,10 @@ int main()
     {
         int lados;
         cout<<"Ingrese una opcion: "<<endl;
-        cout<<"Opción 1 insertar: "<<endl;
-        cout<<"Opción 2 mostrar datos: "<<endl;
-        cout<<"Opción 3 ordenar: "<<endl;
-        cout<<"Opción 5 salir: "<<endl;
+        cout<<"Opcion 1 insertar: "<<endl;
+        cout<<"Opcion 2 mostrar datos: "<<endl;
+        cout<<"Opcion 3 ordenar: "<<endl;
+        cout<<"Opcion 5 salir: "<<endl;
         cin>>option;
         switch (option)
         {

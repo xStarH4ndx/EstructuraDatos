@@ -88,12 +88,10 @@ class Lista{
             Nodo* actual = first;
             Nodo* siguiente;
             int num;
-            do
-            {
+            do{
                 siguiente= actual->getNext();
 
-                do
-                {
+                do{
                     if(actual->getFigura()->getNumLados()>siguiente->getFigura()->getNumLados())
                     {
                         int num =actual->getFigura()->getNumLados();
@@ -110,8 +108,8 @@ class Lista{
             if(first->getFigura()->getNumLados()>last->getFigura()->getNumLados())
             {
                 int num =first->getFigura()->getNumLados();
-                    first->getFigura()->setNumLados(last->getFigura()->getNumLados());
-                    last->getFigura()->setNumLados(num);   
+                first->getFigura()->setNumLados(last->getFigura()->getNumLados());
+                last->getFigura()->setNumLados(num);   
             }
             
         }
