@@ -1,0 +1,47 @@
+Naturaleza de la recursividad:
+- Se dice que un objeto es recursivo cuando forma parte de si mismo
+
+
+
+int y= x(h-1)+(x(h+1));
+
+
+ESTUDIAR RECURSIVIDAD EN YUTU
+
+
+buscarfib(int x){
+    if(x<=1){
+        return x;
+    }
+    int y= buscarfib(x-1)+buscarfib(x-2);
+    return y;
+}
+
+
+
+
+
+
+
+
+
+
+Tarea formativa: algoritmos recursivos, se trata de un soporte con tres varillas y en una de ellas se encuentras discos
+concentricos de distintos tamaño y ordenados de mayor a menor tamaño.
+El juego consiste en pasar todos los discos de otra varilla teniendo en cuenta que:
+- los discos tienen que estar siempre situados en alguno de los soportes.
+- en cada movimiento solo se puede pasar un discos
+- los discos siempre tienen que estar ordenados de mayor a menor tamaño
+
+
+
+
+Siempre se tiene que poner ordenados
+
+PALO1       PALO2       PALO3
+  x1x         |
+  x2x         |
+  3           1
+  4           2
+
+  PONER LAS COSAS EN ORDEN, EL 1 NO PUEDE ESTAR DE BAJO DEL 2, PORQUE LA PIEZA ES MAS GRANDE Y EL 1 CHICO
