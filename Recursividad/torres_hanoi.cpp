@@ -34,14 +34,14 @@ int main()
 int hanoi(int n, string inicio, string aux, string destino) {
     int movimientos = 0;
 
-    if (n == 1) {
+    if (n == 1) {//Caso base (1 disco pasa directo)
         cout << "Mueve el disco " << n << " del " << inicio << " al " << destino << endl;
         movimientos++;
-    } else {
-        movimientos += hanoi(n - 1, inicio, destino, aux); // Movimiento antes de imprimir
+    } else {//Caso general (origen->Auxiliar; Auxiliar->Destino)
+        movimientos += hanoi(n - 1, inicio, destino, aux); //Movimiento al destino
         cout << "Mueve el disco " << n << " del " << inicio << " al " << destino << endl;
         movimientos++;
-        movimientos += hanoi(n - 1, aux, inicio, destino); // Movimiento después de imprimir
+        movimientos += hanoi(n - 1, aux, inicio, destino); //Movimiento del aux al destino
     }
     return movimientos;
 }
