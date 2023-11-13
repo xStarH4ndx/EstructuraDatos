@@ -1,4 +1,8 @@
 /*
+Burno Toro Elgueta
+20864066-6
+ICCI
+-------------------------------------------
 PROBLEMA DE RECURSIVIDAD - TORRES DE HANOI
 
 Palo1       PALO2       PALO3
