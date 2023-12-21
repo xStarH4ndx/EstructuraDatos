@@ -1,0 +1,68 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+/*
+void preOrden(nodo* arbol){
+    if(arbol==null){
+        return;
+    }else{
+        cout<<arbol->dato;
+        preOrden(arbol->izquierdo);
+        preOrden(arbol->derecho);
+    }
+}
+
+int contarMayoresEnABB(Nodo* raiz, int X) {
+    if (raiz == nullptr) {
+        return 0;
+    }
+
+    if (raiz->valor > X) {
+        // Contar el nodo actual y los nodos en los subárboles izquierdo y derecho
+        return 1 + contarMayoresEnABB(raiz->izquierda, X) + contarMayoresEnABB(raiz->derecha, X);
+    } else {
+        // Solo explorar el subárbol derecho
+        return contarMayoresEnABB(raiz->derecha, X);
+    }
+}
+
+
+void MostrarArbol(nodo *arbol, int cont){
+    if(arbol == NULL){//Saber si el arbol esta vacio.
+        return;
+    }else{//Si no esta vacio.
+        MostrarArbol(arbol->der,cont+1);//imprimiendo lado derecho.
+        cout<<arbol->dato<<endl;
+        MostrarArbol(arbol->izq,cont+1);//imprimiendo lado izquierdo.
+    }
+}
+*/
+double calcularPromedio(Nodo*head,string nombre,string ramo){
+    if(head==null){return 0.0;}
+    Nodo* aux= head;
+    Nodo* alumno;
+    do{
+        if(aux->getNombre==nombre){alumno=aux;}
+        aux=aux->sig;
+    }while(aux!=head);
+    if(alumno==null){return 0.0;}
+    NodoR* aRamo;
+    NodoR* auxR;
+    aRamo= alumno->ptr;
+    if(aRamo==null){return 0.0;}//no tiene ramos
+    do{
+        if(aRamo->getNombre==ramo){auxR=aRamo;}
+        aRamo= aRamo->sig;
+    }while(aRamo!=null);
+    if(auxR==null){return 0.0;}//no existe
+    NodoN*aNota;
+    aNota= auxR->ptr;
+    if(aNota==null){return 0.0;}//no tiene nota
+    double promedio=0.0;
+    do{
+        promedio= promedio + ((aNota->getNota)*(aNota->getPeso));
+        aNota= aNota->sig;
+    }while(aNota!=null);
+    return promedio;
+}
+
