@@ -1,0 +1,19 @@
+FECHAS PRUEBAS:
+
+NO HABRÁ TERMINOS PAREADOS, PURO EJERCICIO
+--------------------------------
+1) 16/01 (DOS bloques)
+Temario:
+- Stack
+- Queue
+
+
+
+--------------------------------
+2) 26/01 (dos bloques)
+Temario:
+- Complejidad algoritmica
+- Recursion
+- A1
+- A2
+- AVL
