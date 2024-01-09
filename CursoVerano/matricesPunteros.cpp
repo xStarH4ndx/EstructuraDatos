@@ -3,17 +3,18 @@ using namespace std;
 
 int main()
 {
-    int m[5][10];
+    int m[3][4];
     int*h= &m[0][0];
-    for(int i=0;i<5;i++){
-        for(int j=0;j<10;j++){
-            if(i%2 && j%2){
-                *(h+i)=i+j;
+
+    for (int i = 0; i <= 3; i++){
+        for (int j = 0; j <= 4; j++){
+            if ((i % 2) && (j % 2)){
+                *(h + i)= i + j;
             }
-            if(!i%2 && j%2){
-                *(h+j)=i+j;
+            if (!(i % 2) && (j % 2)){
+                *(h + j)= i + j;
             }else{
-                *(h+(i*j))= *h+(i*j);
+                *(h+ (i * j))= *h + (i * j);
             }
         }
     }
