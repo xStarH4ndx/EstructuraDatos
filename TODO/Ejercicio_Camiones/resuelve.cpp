@@ -25,7 +25,7 @@ int main(){
             aux1.push(pila.top());
             pila.pop();
         }else{
-            if(pila.top().getPeso() < aux1.top().getPeso()){
+            if(pila.top().getPeso()<aux1.top().getPeso()){
                 aux1.push(pila.top());
                 pila.pop();
             }else{
@@ -35,7 +35,6 @@ int main(){
                 }
                 aux1.push(pila.top());
                 pila.pop();
-
                 while(!aux2.empty()){
                     aux1.push(aux2.top());
                     aux2.pop();
