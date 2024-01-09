@@ -27,9 +27,13 @@ public:
 };
 
 int main() {
-    Poligono* c2= new Cuadrado(5);
-    c2->~Poligono();
-    cout<<"-------"<<endl;
-    Poligono p1(4);
+    Cuadrado c1(5);
+    Triangulo t1(3);
+    Cuadrado* c2= new Cuadrado(4);
+    Poligono* t2= new Triangulo(4);
+    cout<<"----------------"<<endl;
+    c2->CalcularArea();
+    t2->CalcularPerimetro();
+    cout<<"----------------"<<endl;
     return 0;
 }
