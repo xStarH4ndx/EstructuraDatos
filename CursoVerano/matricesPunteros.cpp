@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//ESTO ES SOLO PARA RUTEAR, NO SE EJECUTA
 int main()
 {
     int m[3][4];
