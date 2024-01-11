@@ -1,3 +1,7 @@
+/*
+PROBLEMA DE LA PRUEBA, EL DEL PUZZLE DE LAS PIESAS QUE TENÍAN QUE MOVERSE
+*/
+
 Nodo* buscarNodo(int _valor, slidingPuzzle* sp){
     Nodo* auxiliar;
     for(int i=0; i<sp ->filas; i++){
