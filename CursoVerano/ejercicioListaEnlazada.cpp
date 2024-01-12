@@ -14,6 +14,9 @@ class Nodo{
         };
 };
 
+/*
+pasarALista es una funcion que me transforma un string a una lista enlazada.
+*/
 Nodo* pasarALista(string palabra){
     Nodo*head= new Nodo(palabra[0],1,nullptr);
     Nodo*aux=head;
@@ -27,6 +30,15 @@ Nodo* pasarALista(string palabra){
     return head;
 };
 
+/*
+verificarPalabra es una funcion que me retorna un booleano, esta función tiene 3 auxiliares
+aux1 corresponde a la palabra del usuario
+aux2 corresponde a la palabra del día
+Estos dos auxiliares siempre irán a la par
+
+aux3 corresponde a la palabra del día, esta se tomará desde el inicio de la palabra todo el tiempo,
+sirve para comprobar si la letra donde "estoy parado" existe o no.
+*/
 bool verificarPalabra(string palabra){
     Nodo*head1= pasarALista(palabra);
     Nodo*head2= pasarALista(PALABRADELDIA);
@@ -34,6 +46,7 @@ bool verificarPalabra(string palabra){
     Nodo*aux2=head2;//palabra del dia
     Nodo*aux3=head2;
     int acertadas=0;
+    
     do{
         if((aux1->caracter==aux2->caracter)){
             acertadas++;
