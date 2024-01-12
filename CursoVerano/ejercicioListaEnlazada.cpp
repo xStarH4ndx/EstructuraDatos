@@ -79,8 +79,9 @@ bool verificarPalabra(string palabra){
 };
 
 int main(){
-    int intentos=0;
+    int intentos=1;
     while(intentos!=6){
+        cout<<"--Intento número "<<intentos<<"--"<<endl;
         string word;
         cout<<"ingresar palabra: ";
         cin>>word;
@@ -94,8 +95,7 @@ int main(){
             break;
         }else{
             intentos++;
-            if(intentos<=5){
-                cout<<"Intentos: "<<intentos<<endl;
+            if(intentos<6){
                 cout<<"--Prueba otra vez--"<<endl;
             }else{
                 cout<<"--GAME OVER--"<<endl;
