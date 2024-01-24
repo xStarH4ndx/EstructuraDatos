@@ -1,4 +1,44 @@
 #include <iostream>
+#include <stack>
+#include <queue>
+using namespace std;
+
+const int filas=5;
+const int columnas=5;
+
+bool movimientoValido(int fila,int columna){
+    if(fila>=0 && fila<filas && columna>=0 && columna<columnas){
+        return true;
+    }
+    return false;
+}
+
+bool resolverLaberinto(int laberinto[filas][columnas]){
+    int filaInicial=0,columnaInicial=0,filaFinal=filas-1,columnaFinal=columnas-1;
+    queue<pair<int,int>>q;
+    q.push(make_pair(filaInicial,columnaInicial));
+    laberinto[filaInicial][columnaInicial]=2;
+    int cambioFila[]={1,0,-1,0};
+    int cambioColumna[]={0,1,0,-1};
+    while(!q.empty()){
+        int fila=q.front().first;
+        int columna= q.front().second;
+        q.pop();
+        if(fila==filaFinal && columna==columnaFinal){
+            return true;
+        }
+        for(int i=0;i<4;i++){
+            int nuevaFila= fila+cambioFila[i];
+            int nuevaColumna=columna + cambioColumna[i];
+            if(movimientoValido(nuevaFila,nuevaColumna) && laberinto[nuevaFila][nuevaColumna]==0){
+                q.push(make_pair(nuevaFila,nuevaColumna));
+                laberinto[nuevaFila][nuevaColumna]=2;
+            }
+        }
+    }
+    return false;
+}
+
 
 int main() {
     // Definir el laberinto como una matriz 5x5
@@ -17,15 +57,11 @@ int main() {
         {0, 1, 0, 1, 1},
         {0, 0, 0, 1, 0}
     };
-
-    // Imprimir el laberinto
-    std::cout << "Laberinto:" << std::endl;
-    for (int i = 0; i < 5; ++i) {
-        for (int j = 0; j < 5; ++j) {
-            std::cout << laberinto[i][j] << " ";
-        }
-        std::cout << std::endl;
+    
+    if(resolverLaberinto(laberinto2)){
+        cout<<"Si se puede resolver"<<endl;
+    }else{
+        cout<<"No se puede"<<endl;
     }
-
     return 0;
 }
